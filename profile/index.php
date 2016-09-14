@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="ja">
-<!--<![endif]--> 
+<!--<![endif]-->
 <!-- HEAD SECTION -->
 <head>
     <meta charset="utf-8" />
@@ -31,6 +31,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <script src="assets/js/send.js"></script>
 </head>
     <!--END HEAD SECTION -->
 <body>
@@ -139,7 +140,7 @@
      <!--WELCOME SECTION -->
       <div class="text-center"  id="welcome" >
 
-                    <h1 >Introduction</h1>
+                    <h3>Introduction</h3>
 
             </div>
 
@@ -181,7 +182,7 @@
                 <div class="col-md-7 col-sm-12 col-md-offset-1  text-justify" >
                     <h3>About My profile</h3><br />
                     <p>
-                        愛知県豊田市出身、21歳の後藤健佑です。<br />
+                        ◯県◯◯市出身の後藤健佑です。<br />
                         現在名古屋工業大学工学部の情報工学科4年生。<br />
                         パソコンを触ることが好きで情報工学部に入るも、プログラミングの難しさに一度挫折。
                         しかし、就職活動を通して自分が実現したいことが見つかり、再びプログラミングを学習中。
@@ -232,26 +233,26 @@
                     <div class="col-md-6  " >
                         <h3>My Address</h3>
                         <p>
-                        愛知県豊田市今町<br />
-                        1-75-2<br />
-                        NU1-505<br />
-                        Call: 090-1827-5901<br />
-                        Email: bsk_daisuki_626@ezweb.ne.jp<br />
+                        ◯◯県◯◯市◯◯町<br />
+                        ◯-◯◯-◯<br />
+                        ◯◯◯<br />
+                        Call: 123-456-7891<br />
+                        Email: hogehoge@test.com<br />
                             </p>
 
                     </div>
                     <div class="col-md-6  " >
                         <h3>Contact me</h3>
-                        <form>
+                        <form method="post" action="userform.php">
                             <div class="row">
                                 <div class="col-md-6 ">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name">
+                                        <input type="text" class="form-control" required="required" placeholder="Name" id="Name" name="name" size="20" maxlength="50">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address">
+                                        <input type="text" class="form-control" required="required" placeholder="Email address" id="email" name="email" size="40" maxlength="50">
                                     </div>
                                 </div>
                             </div>
@@ -259,16 +260,15 @@
                             <div class="row">
                                 <div class="col-md-12 ">
                                     <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="3"  placeholder="Message"></textarea>
+                                        <textarea class="form-control" name="comments" placeholder="Message" rows="3" cols="40" maxlength="200"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-success">送信</button>
+                                        <button type="submit" value="submit" class="btn btn-success" onclick="send()">送信</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
 
